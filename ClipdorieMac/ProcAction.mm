@@ -96,9 +96,13 @@ static ProcAction* _sharedInstance;
     }
     else
     {
-        
+       // int a = kCFStringEncoding();
         NSString* str = [self GetText];
         
+        NSLog(@"%@",str);
+        NSUInteger encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingEUC_KR);
+        
+
         //Trimming white spaces
         NSString *trimStr = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         

@@ -618,11 +618,11 @@
 -(void)timerCalled
 {
     // NSLog(@"Timer Called");
-     // Your Code
+
     CFTimeInterval elapsedTime = fabs(CACurrentMediaTime() - startTime);
-    [self addOutput:[NSString stringWithFormat:@"Timer called%d\t%.2f", cntPress, elapsedTime]];
+    [self addOutput:[NSString stringWithFormat:@"Timer called %d\t%.2f", cntPress, elapsedTime]];
     
-    if(cntPress>0)
+    if(cntPress>=0)
     {
         if(elapsedTime>2)
         {
